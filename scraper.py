@@ -11,7 +11,7 @@ import paramiko
 
 
 site = 'Hotstar'
-feed_dir = '/home/justdial/data/output/'+site
+feed_dir = 'output/'+site
 #file = feed_dir+'/'+site+'.csv'
 file = feed_dir+'/HT.csv'
 
@@ -295,20 +295,3 @@ with open(file, 'w') as csvFile:
 print("Writing completed: " + file)
 csvFile.close()    
 
-
-
-def scp_file():
-    remotehost = 'justdial@172.29.132.222'
-    remotefile = '/home/justdial/Desktop/Online_Movies/'
-    
-    ssh_client =paramiko.SSHClient()
-    ssh_client.load_host_keys(os.path.expanduser(os.path.join("~", ".ssh", "known_hosts")))
-    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh_client.connect(hostname='172.29.132.222',username='justdial',password='justdial')
-    ftp_client=ssh_client.open_sftp()
-    ftp_client.put(file,remotefile+"/HT.csv")
-    ftp_client.close()
-    ssh_client.close()
-    print ("FILE SCP Done!")
-
-scp_file()

@@ -27,7 +27,7 @@
         <li>Run the script:
             <pre><code>python scraper.py</code></pre>
         </li>
-        <li>The script will scrape the data and save it to a CSV file (e.g., <code>HT.csv</code>) in the <code>/home/justdial/data/output/Hotstar</code> directory.</li>
+        <li>The script will scrape the data and save it to a CSV file (e.g., <code>HT.csv</code>) in the <code>output/Hotstar</code> directory.</li>
     </ol>
     <h2>Contributing</h2>
     <p>Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.</p>
